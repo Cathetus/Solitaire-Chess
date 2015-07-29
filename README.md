@@ -11,4 +11,4 @@ Solitaire Chess is a single-player logic game designed by Vesa Timonen.
 ## Development
 * Using [Lua](http://www.lua.org/) and [Löve](https://love2d.org/)
 * Images(tiles, pieces) must be 90x90 to work well.
-* Contributions are welcomed and appreciated
+* Contributions are welcomed and appreciated.
