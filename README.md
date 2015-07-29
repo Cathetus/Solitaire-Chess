@@ -1,6 +1,6 @@
 # Solitaire Chess
 
-Solitaire Chess is a single-player logic game that uses the rules of chess in simplified form. Designed by Vesa Timonen.
+Solitaire Chess is a single-player logic game designed by Vesa Timonen.
 * Your goal is to capture the chess pieces until only one piece remains on the board.
 * When there is only one piece left on the board, you win!
 * Every move you make must result in a capture.
