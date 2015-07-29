@@ -13,21 +13,21 @@ function love.load()--loading the images and setting up the board
 	q = love.graphics.newImage("queen.png")
 	k = love.graphics.newImage("king.png")
 	
-	game = {}
-	board = {ls,ds,ls,ds,ls,ds,ls,ds,ls,ds,ls,ds,ls,ds,ls,ds}
+	board = {}
+	tiles = {ls,ds,ls,ds,ls,ds,ls,ds,ls,ds,ls,ds,ls,ds,ls,ds}
 	pieces = {0,p,n,b,r,q,k}
 	
-	for i = 1, #board do
+	for i = 1, #tiles do
 		x = math.random(1,#pieces)
-		game[i] = pieces[x]
+		board[i] = pieces[x]
 	end
 end
 
 function love.keypressed(key, isrepeat)--reset the board
 	if key == " " then
-		for i = 1, #board do
+		for i = 1, #tiles do
 			x = math.random(1,#pieces)
-			game[i] = pieces[x]
+			board[i] = pieces[x]
 		end
 	end
 end
@@ -35,9 +35,9 @@ end
 function love.draw()--drawing the board
 	for i = 1, 4 do
 		for j = 1, 4 do
-			love.graphics.draw(board[i+j-1], i*90-90, j*90-90)
-			if game[i+j-1] ~= 0 then
-				love.graphics.draw(game[i+j-1], i*90-90, j*90-90)
+			love.graphics.draw(tiles[i+j-1], i*90-90, j*90-90)
+			if board[i+j-1] ~= 0 then
+				love.graphics.draw(board[i+j-1], i*90-90, j*90-90)
 			end
 		end
 	end
