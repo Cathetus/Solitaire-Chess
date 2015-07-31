@@ -1,5 +1,14 @@
 math.randomseed(os.time())
 
+function shuffle(a)
+	b = #a
+	for i = 1, b do
+		c = math.random(1,b)
+		a[c], a[i] = a[i], a[c]
+	end
+	return a
+end
+
 function love.load()--loading the images and setting up the board
 	love.window.setMode(360,360)
 
@@ -13,32 +22,28 @@ function love.load()--loading the images and setting up the board
 	q = love.graphics.newImage("queen.png")
 	k = love.graphics.newImage("king.png")
 	
-	board = {}
-	tiles = {ls,ds,ls,ds,ls,ds,ls,ds,ls,ds,ls,ds,ls,ds,ls,ds}
-	pieces = {0,p,n,b,r,q,k}
 	
-	for i = 1, #tiles do
-		x = math.random(1,#pieces)
-		board[i] = pieces[x]
-	end
+	tiles = {ls,ds,ls,ds,ls,ds,ls,ds,ls,ds,ls,ds,ls,ds,ls,ds}
+	board = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,p,p,n,n,b,b,r,r,q,k}
+	shuffle(board)
+	
 end
 
 function love.keypressed(key, isrepeat)--reset the board
-	if key == " " then
-		for i = 1, #tiles do
-			x = math.random(1,#pieces)
-			board[i] = pieces[x]
-		end
+	if key == " " then--space key
+		shuffle(board)
 	end
 end
 
 function love.draw()--drawing the board
+	x = 1
 	for i = 1, 4 do
 		for j = 1, 4 do
 			love.graphics.draw(tiles[i+j-1], i*90-90, j*90-90)
-			if board[i+j-1] ~= 0 then
-				love.graphics.draw(board[i+j-1], i*90-90, j*90-90)
+			if board[x] ~= 0 then
+				love.graphics.draw(board[x], i*90-90, j*90-90)
 			end
+			x = x + 1
 		end
 	end
 end
