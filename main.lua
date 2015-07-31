@@ -1,10 +1,9 @@
 math.randomseed(os.time())
 
 function shuffle(a)
-	b = #a
-	for i = 1, b do
-		c = math.random(1,b)
-		a[c], a[i] = a[i], a[c]
+	for i = 1, #a do
+		b = math.random(1,#a)
+		a[b], a[i] = a[i], a[b]
 	end
 	return a
 end
