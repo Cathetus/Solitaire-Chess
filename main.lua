@@ -11,15 +11,15 @@ end
 function love.load()--loading the images and setting up the board
 	love.window.setMode(360,360)
 
-	ls = love.graphics.newImage("light_square.png")
-	ds = love.graphics.newImage("dark_square.png")
+	ls = love.graphics.newImage("data/light_square.png")
+	ds = love.graphics.newImage("data/dark_square.png")
 	
-	p = love.graphics.newImage("pawn.png")
-	n = love.graphics.newImage("knight.png")
-	b = love.graphics.newImage("bishop.png")
-	r = love.graphics.newImage("rook.png")
-	q = love.graphics.newImage("queen.png")
-	k = love.graphics.newImage("king.png")
+	p = love.graphics.newImage("data/pawn.png")
+	n = love.graphics.newImage("data/knight.png")
+	b = love.graphics.newImage("data/bishop.png")
+	r = love.graphics.newImage("data/rook.png")
+	q = love.graphics.newImage("data/queen.png")
+	k = love.graphics.newImage("data/king.png")
 	
 	
 	tiles = {ls,ds,ls,ds,ls,ds,ls,ds,ls,ds,ls,ds,ls,ds,ls,ds}
