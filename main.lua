@@ -38,9 +38,9 @@ function love.draw()--drawing the board
 	x = 1
 	for i = 1, 4 do
 		for j = 1, 4 do
-			love.graphics.draw(tiles[i+j-1], i*90-90, j*90-90)
+			love.graphics.draw(tiles[i+j-1], j*90-90, i*90-90)
 			if board[x] ~= 0 then
-				love.graphics.draw(board[x], i*90-90, j*90-90)
+				love.graphics.draw(board[x], j*90-90, i*90-90)
 			end
 			x = x + 1
 		end
