@@ -15,3 +15,8 @@ Solitaire Chess is a single-player logic game designed by Vesa Timonen.
 
 ## Preview
 ![](https://github.com/Cathetus/Solitaire-Chess/blob/master/preview.png)
+
+##Some features want to add:
+* Mouse input to be able to move the chess pieces.
+* Generate solvable challenge from simple to complex difficulty.
+* Adding ThinkFun's 1st and 2nd editions.
