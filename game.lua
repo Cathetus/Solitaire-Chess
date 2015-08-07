@@ -2,8 +2,8 @@ game = {}
 
 --Load the images & setup the board
 function game.load()
-	ls = love.graphics.newImage("assets/light_square.png")
-	ds = love.graphics.newImage("assets/dark_square.png")
+	t1 = love.graphics.newImage("assets/tile1.png")
+	t2 = love.graphics.newImage("assets/tile2.png")
 	
 	p = love.graphics.newImage("assets/pawn.png")
 	n = love.graphics.newImage("assets/knight.png")
@@ -12,7 +12,7 @@ function game.load()
 	q = love.graphics.newImage("assets/queen.png")
 	k = love.graphics.newImage("assets/king.png")
 	
-	tiles = {ls,ds,ls,ds,ls,ds,ls,ds,ls,ds,ls,ds,ls,ds,ls,ds}
+	tiles = {t1,t2,t1,t2,t1,t2,t1,t2,t1,t2,t1,t2,t1,t2,t1,t2}
 	board = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,p,p,n,n,b,b,r,r,q,k}
 end
 
